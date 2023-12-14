@@ -12,11 +12,28 @@
         <div class="">
             <h1 class="title">Trivia</h1>
             <p class="paragraph">Welcome to trivia game. <br> Choose your favorite theme:</p>
-            <button class="start button" onclick="start()">Start</button>
-        </div>
+            <div class="theme-container">
+            <div class="theme-icon">
+                <button class="theme-button" onclick="play()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M20.937 7.53C19.227 4.119 15.803 2 12 2 6.486 2 2 6.486 2 12s4.486 10 10 10c3.803 0 7.227-2.119 8.937-5.53a1 1 0 0 0-.397-1.316L15.017 12l5.522-3.153c.461-.264.636-.842.398-1.317zm-8.433 3.602a.999.999 0 0 0 0 1.736l6.173 3.525A7.949 7.949 0 0 1 12 20c-4.411 0-8-3.589-8-8s3.589-8 8-8a7.95 7.95 0 0 1 6.677 3.606l-6.173 3.526z"></path><circle cx="11.5" cy="7.5" r="1.5"></circle></svg>
+                </button>
+                <p>Games</p>
+            </div>
+            <div class="theme-icon">
+                <button class="theme-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zM4 12c0-.899.156-1.762.431-2.569L6 11l2 2v2l2 2 1 1v1.931C7.061 19.436 4 16.072 4 12zm14.33 4.873C17.677 16.347 16.687 16 16 16v-1a2 2 0 0 0-2-2h-4v-3a2 2 0 0 0 2-2V7h1a2 2 0 0 0 2-2v-.411C17.928 5.778 20 8.65 20 12a7.947 7.947 0 0 1-1.67 4.873z"></path></svg>
+                </button>
+                <p>Countries</p>
+            </div>
+            <div  class="theme-icon">
+                <button class="theme-button"><svg enable-background="new 0 0 24 24" height="24px" id="Layer_1" version="1.1" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M23.7,2.4l-2.1-2.1c-0.4-0.4-1-0.4-1.4,0L18,2.4c-0.4,0.4-0.4,1,0,1.4l-3.8,3.8c-1.9-1-4.2-0.7-5.8,0.9C8,9,7.6,9.5,7.4,10   c-1.9-0.1-3.9,0.6-5.3,2c-2.7,2.7-2.7,7.2,0,9.9c2.7,2.7,7.2,2.7,9.9,0c1.5-1.5,2.1-3.4,2-5.3c0.5-0.2,1.1-0.6,1.5-1   c1.6-1.6,1.9-4,0.9-5.9L20.1,6c0.4,0.4,1,0.4,1.4,0l2.1-2.1C24,3.4,24,2.8,23.7,2.4z M14.1,14.2c-0.2,0.2-0.3,0.3-0.5,0.4   c-0.6,0.4-1,0.4-1.3,1C12,16,12,16.4,12,17c0,1.3-0.5,2.5-1.5,3.5c-2,2-5.1,2-7.1,0c-2-2-2-5.1,0-7.1c1-1,2.2-1.4,3.5-1.5   c0.7,0,1.2,0,1.5-0.2c0.4-0.4,0.6-0.8,1-1.4c0.1-0.2,0.2-0.4,0.4-0.5c1.2-1.2,3.1-1.2,4.2,0S15.2,13,14.1,14.2z M15.8,8.9   c-0.1-0.1-0.2-0.2-0.3-0.4c-0.1-0.1-0.3-0.2-0.4-0.3l3.6-3.6l0.7,0.7L15.8,8.9z M20.8,5.2l-2.1-2.1L20.8,1l2.1,2.1L20.8,5.2z"/><path d="M7.9,14c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S9.1,14,7.9,14z M7.9,17c-0.6,0-1-0.4-1-1s0.4-1,1-1s1,0.4,1,1S8.5,17,7.9,17   z"/></g></svg>
+                </button>
+                <p>General<br>Culture</p>
+            </div>
+            <!-- </div>
+            <button class="start button" onclick="play()">Start</button>
+        </div> -->
     </div>
     <script>
-function start() {
+function play() {
   window.location.replace("app.html");
 }
     </script>

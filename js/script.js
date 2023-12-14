@@ -16,16 +16,46 @@ const questions = [
     answers: ["Amazonas", "Darien", "Upata"],
     correctAnswer: 0,
   },
-  // {
-  //   question: "¿Quién escribió La Odisea?",
-  //   answers: ["Omero", "Shakespeare", "Los apostoles"],
-  //   correctAnswer: 0,
-  // },
-  // {
-  //   question: "¿Dónde originaron los juegos olímpicos?",
-  //   answers: ["Mexico", "Grecia", "Holanda"],
-  //   correctAnswer: 1,
-  // },
+  {
+    question: "¿Quién escribió La Odisea?",
+    answers: ["Omero", "Shakespeare", "Los apostoles"],
+    correctAnswer: 0,
+  },
+  {
+    question: "¿Dónde originaron los juegos olímpicos?",
+    answers: ["Mexico", "Grecia", "Holanda"],
+    correctAnswer: 1,
+  },
+];
+
+const gamesQuestions = [
+  {
+    question: "¿Qué videojuego es el más vendido de todos los tiempos?",
+    answers: ["Minecraft", "Mario Bros", "Fornite"],
+    correctAnswer: 1,
+  },
+  {
+    question: "¿Cuál es la consola de juegos más vendida hasta la fecha?",
+    answers: ["PlayStation 4", "Nintendo DS", "PlayStation 2"],
+    correctAnswer: 3, 
+  },
+  {
+    question: "¿En qué se inspiró el creador de Pac Man para crear este personaje?",
+    answers: ["Una galleta", "Una tarta", "Una pizza"],
+    correctAnswer: 3, 
+  }
+];
+
+const countriesQuestions = [  {
+  question: "¿Cuál es la consola de juegos más vendida hasta la fecha?",
+  answers: ["PlayStation 4", "Nintendo DS", "PlayStation 2"],
+  correctAnswer: 3, 
+},
+{
+  question: "¿En qué se inspiró el creador de Pac Man para crear este personaje?",
+  answers: ["Una galleta", "Una tarta", "Una pizza"],
+  correctAnswer: 3, 
+}
 ];
 
 let currentQuestion = 0;
@@ -52,7 +82,7 @@ function checkAnswer() {
     stop();
     currentQuestion--;
     document.getElementById("quiz").style.display = "none"
-    document.getElementById("result").innerHTML = `Your score was ${score}/5.`;
+    document.getElementById("result").innerHTML = `Your score was ${score}/${questions.length}.`;
     document.getElementById("retry").style.display = "inline-flex";
     document.getElementById("reply").style.display = "none"
   }
@@ -64,7 +94,7 @@ function checkAnswer() {
   } else {
     stop();
     document.getElementById("quiz").style.display = "none"
-    document.getElementById("result").innerHTML = `Your score was ${score}/5. Congrats, you won!`;
+    document.getElementById("result").innerHTML = `Your score was ${score}/${questions.length}. Congrats, you won!`;
     document.getElementById("retry").style.display = "inline-flex";
     document.getElementById("reply").style.display = "none"
   }

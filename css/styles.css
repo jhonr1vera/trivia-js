@@ -7,7 +7,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #b9b3a9;
+  /* background: #b9b3a9; */
+  background: #6AB6C4;
   display: flex;
   justify-content: center;
 }
@@ -26,6 +27,16 @@ h1 {
 }
 
 p{
+  text-align: center ;
+}
+
+.paragraph {
+  text-align: center;
+}
+
+.theme{
+  display: inline-flex;
+  align-content: center;
   text-align: center;
 }
 
@@ -77,7 +88,27 @@ p{
 }
 
 .cronometer{
+  text-align: center;
   margin-top: 20px;
   font-weight: lighter;
   font-size: 17px;
 }
+
+.theme-container{
+  display:flex;
+  justify-content: space-between;
+}
+
+.theme-button{
+  border: black;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+}
+
+.theme-icon{
+  margin: 10px;
+}
+
+
