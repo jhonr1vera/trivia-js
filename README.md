@@ -1,7 +1,7 @@
 # trivia-js  
   
 **Description**  
-Trivia Game with three diferent themes (en)
+Trivia Game with three different topics (en)
   
 **Technologies**  
 + JS  
