@@ -1,4 +1,3 @@
-document.getElementById("reply").style.display = "none"
 document.getElementById("time").style.display = "none"
 
 // Buttons
@@ -13,7 +12,7 @@ gamesButton.addEventListener('click', function() {
     checkAnswer(gamesQuestions)
   });
   start();
-  document.getElementById("reply").style.display = "";
+  document.getElementById("reply").style.display = "inline-flex";
 });
 
 countriesButton.addEventListener('click', function() {
@@ -22,7 +21,7 @@ countriesButton.addEventListener('click', function() {
     checkAnswer(countriesQuestions)
   });
   start();
-  document.getElementById("reply").style.display = "";
+  document.getElementById("reply").style.display = "inline-flex";
 });
 
 cultureButton.addEventListener('click', function() {
@@ -31,7 +30,7 @@ cultureButton.addEventListener('click', function() {
     checkAnswer(cultureQuestions)
   });
   start();
-  document.getElementById("reply").style.display = "";
+  document.getElementById("reply").style.display = "inline-flex";
 });
 
 // Questions
