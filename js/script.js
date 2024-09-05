@@ -1,197 +1,44 @@
+fetch('../data/data.json')
+  .then(res => res.json())
+  .then(JsonData => {
+    data = JsonData; 
+  } 
+  )
+  .catch(err => console.log(err))
+
 document.getElementById("time").style.display = "none"
 
-// Buttons
 const replyButton = document.getElementById('reply');
 const gamesButton = document.getElementById('games');
 const countriesButton = document.getElementById('countries');
 const cultureButton = document.getElementById('culture');
 
 gamesButton.addEventListener('click', function() {
-  showQuestion(gamesQuestions);
+  showQuestion(data.gamesQuestions);
   replyButton.addEventListener('click', function(){
-    checkAnswer(gamesQuestions)
+    checkAnswer(data.gamesQuestions)
   });
   start();
   document.getElementById("reply").style.display = "inline-flex";
 });
 
 countriesButton.addEventListener('click', function() {
-  showQuestion(countriesQuestions);
+  showQuestion(data.countriesQuestions);
   replyButton.addEventListener('click', function(){
-    checkAnswer(countriesQuestions)
+    checkAnswer(data.countriesQuestions)
   });
   start();
   document.getElementById("reply").style.display = "inline-flex";
 });
 
 cultureButton.addEventListener('click', function() {
-  showQuestion(cultureQuestions);
+  showQuestion(data.cultureQuestions);
   replyButton.addEventListener('click', function(){
-    checkAnswer(cultureQuestions)
+    checkAnswer(data.cultureQuestions)
   });
   start();
   document.getElementById("reply").style.display = "inline-flex";
 });
-
-// Questions
-const cultureQuestions = [
-  {
-    question: "What is the capital of Venezuela?",
-    answers: ["Caracas", "Maracaibo", "Valencia"],
-    correctAnswer: 0,
-  },
-  {
-    question: "What is the capital of Chile?",
-    answers: ["Quito", "Santiago", "Lima"],
-    correctAnswer: 1,
-  },
-  {
-    question: "What is the largest jungle in the world?",
-    answers: ["Amazon", "Darien", "Upata"],
-    correctAnswer: 0,
-  },
-  {
-    question: "Who wrote The Odyssey?",
-    answers: ["Omero", "Shakespeare", "The apostles"],
-    correctAnswer: 0,
-  },
-  {
-    question: "Where did the Olympic Games originate?",
-    answers: ["Mexico", "Greece", "Holland"],
-    correctAnswer: 1,
-  },
-  {
-    question: "Who is the author of 'One Hundred Years of Solitude'?",
-    answers: ["Gabriel García Márquez", "Mario Vargas Llosa", "Julio Cortázar"],
-    correctAnswer: 0
-  },
-  {
-    question: "What is the capital of Australia?",
-    answers: ["Sydney", "Melbourne", "Canberra"],
-    correctAnswer: 2
-  },
-  {
-    question: "Who painted the 'Mona Lisa'?",
-    answers: ["Vincent Van Gogh", "Pablo Picasso", "Leonardo da Vinci"],
-    correctAnswer: 2
-  },
-  {
-    question: "What is the longest river in the world?",
-    answers: ["Amazon River", "Nile River", "Yangtze River"],
-    correctAnswer: 1
-  },
-  {
-    question: "In what year did World War II begin?",
-    answers: ["1914", "1939", "1941"],
-    correctAnswer: 1
-  }
-];
-
-const gamesQuestions = [
-  {
-    question: "What is the best-selling video game of all time?",
-    answers: ["Super Mario Bros.", "Minecraft", "Tetris"],
-    correctAnswer: 1,
-  },
-  {
-    question: "Which company developed the video game 'The Legend of Zelda'?",
-    answers: ["Sony", "Nintendo", "Sega"],
-    correctAnswer: 1, 
-  },
-  {
-    question: "What is the name of the protagonist in the video game 'The Witcher'?",
-    answers: ["Geralt of Rivia", "Arthur Morgan", "Aloy"],
-    correctAnswer: 0,
-  },
-  {
-    question: "In what year was the first video game of 'Super Mario Bros.' released?",
-    answers: ["1980", "1985", "1990"],
-    correctAnswer: 1,
-  },
-  {
-    question: "What is the name of the main villain in the video game series 'Final Fantasy VII'?",
-    answers: ["Sephiroth", "Bowser", "Ganondorf"],
-    correctAnswer: 0,
-  },
-  {
-    question: "What is the name of the main character in 'Halo'?",
-    answers: ["Master Chief", "Solid Snake", "Marcus Fenix"],
-    correctAnswer: 0
-  },
-  {
-    question: "Which video game popularized the Battle Royale genre?",
-    answers: ["Fortnite", "PUBG", "Call of Duty"],
-    correctAnswer: 1
-  },
-  {
-    question: "What is the name of the kingdom where most of 'The Legend of Zelda' games take place?",
-    answers: ["Hyrule", "Azeroth", "Eorzea"],
-    correctAnswer: 0
-  },
-  {
-    question: "What is the name of the dragon in 'Spyro the Dragon'?",
-    answers: ["Spyro", "Draco", "Smaug"],
-    correctAnswer: 0
-  },
-  {
-    question: "In which video game is the city of Rapture located?",
-    answers: ["Bioshock", "Fallout", "Half-Life"],
-    correctAnswer: 0
-  }
-];
-
-const countriesQuestions = [
-  {
-    question: "How many continents are there?",
-    answers: ["7", "5", "4"],
-    correctAnswer: 0, 
-  },
-  {
-    question: "How many countries are there in the world?",
-    answers: ["174", "195", "206"],
-    correctAnswer: 1, 
-  },
-  {
-    question: "Which country is famous for its sushi, sashimi and ramen noodle dishes?",
-    answers: ["China", "Japan", "India"],
-    correctAnswer: 1, 
-  },
-  {
-    question: "Which country has the highest population in the world?",
-    answers: ["Russia", "Brazil", "China"],
-    correctAnswer: 2, 
-  },
-  {
-    question: "Which country is known for the iconic monument of Machu Picchu?",
-    answers: ["Peru", "Venezuela", "Argentina"],
-    correctAnswer: 0, 
-  },
-  {
-    question: "Which is the most populous country in the world?",
-    answers: ["India", "China", "United States"],
-    correctAnswer: 1
-  },
-  {
-    question: "Which is the largest country in the world by geographical area?",
-    answers: ["Canada", "Russia", "China"],
-    correctAnswer: 1
-  },
-  {
-    question: "Which is the smallest country in the world?",
-    answers: ["Monaco", "Vatican", "San Marino"],
-    correctAnswer: 1
-  },
-  {
-    question: "Which country has the most spoken languages?",
-    answers: ["India", "Papua New Guinea", "Indonesia"],
-    correctAnswer: 1
-  },
-  {
-    question: "Which country has the most UNESCO World Heritage Sites?",
-    answers: ["Italy", "China", "Spain"],
-    correctAnswer: 0
-  }
-];
 
 
 let currentQuestion = 0;
@@ -264,3 +111,35 @@ function updateTime() {
     .toString()
     .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
   };
+
+  document.addEventListener('DOMContentLoaded', () => {
+
+    const DATE_TARGET = new Date('02/14/2024 0:01 AM');
+    // DOM for render
+    const SPAN_DAYS = document.querySelector('span#days');
+    const SPAN_HOURS = document.querySelector('span#hours');
+    const SPAN_MINUTES = document.querySelector('span#minutes');
+
+    const MILLISECONDS_OF_A_SECOND = 1000;
+    const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+    const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
+    const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
+
+    function updateCountdown() {
+
+        const NOW = new Date()
+        const DURATION = DATE_TARGET - NOW;
+        const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
+        const REMAINING_HOURS = Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
+        const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
+        const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
+
+        SPAN_DAYS.textContent = REMAINING_DAYS;
+        SPAN_HOURS.textContent = REMAINING_HOURS;
+        SPAN_MINUTES.textContent = REMAINING_MINUTES;
+        SPAN_SECONDS.textContent = REMAINING_SECONDS;
+    }
+    updateCountdown();
+
+    setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+    });
