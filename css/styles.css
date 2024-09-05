@@ -106,6 +106,21 @@ p{
   cursor: pointer;
 }
 
+.generalCulture{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+    & .guitar{
+      display: flex;
+      align-items: center;
+      justify-content:  center;
+    }
+    & .text{
+        width: 50px;
+    }
+}
+
+
 .theme-button:hover{
   background-color: #C7D0D1;
 }
